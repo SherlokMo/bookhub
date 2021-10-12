@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000
 app.use(bodyParser.json())
 
 app.get('/', (req: Request, res: Response) => {
-    res.send({message: "I'm lslsing wow!"})
+    res.send({message: "hello world!"})
 })
 
 
