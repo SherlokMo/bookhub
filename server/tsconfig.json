@@ -7,5 +7,11 @@
     "rootDir": "./",
     "baseUrl": "./",
     "esModuleInterop": true                               /* Skip type checking all .d.ts files. */
-  }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
