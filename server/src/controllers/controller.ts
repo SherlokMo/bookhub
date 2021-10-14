@@ -1,7 +1,7 @@
-import * as express from 'express'
+import {Router} from 'express'
 
 abstract class Controller{
-    public router = express.Router();
+    public router = Router();
     abstract intializeRoutes();
 }
 
