@@ -1,19 +1,8 @@
-import express from "express"
-import { Request, Response } from 'express';
-import loggerMiddleware from "./middlewares/loggerMiddleware";
-import bodyParser from "body-parser"
+import App from "./app";
+import FilesController from "./controllers/files.controller";
 
-const app = express();
-const PORT = process.env.PORT || 3000
+const app = new App([
+    new FilesController()
+]);
 
-app.use(bodyParser.json())
-app.use(loggerMiddleware);
-
-app.get('/', (req: Request, res: Response) => {
-    res.send({message: "hello world!"})
-})
-
-
-const server = app.listen(PORT, () => {
-    console.log(`app started listening on port ${PORT} `);
-})
+app.listen();
